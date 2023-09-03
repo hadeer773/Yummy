@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="dscription" content="Show Food" />
+    <meta name="keywords" content="Food, Ingredients , recipe , طعام ,مكونات ,وصفات" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="./image/logo.ico" type="image/x-icon" />
+    <meta name="author" content="Hader mahmoud shaban" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+    <!--!------------------------------spinners---------------------------------!-->
+    <section>
+        <div class="loading">
+            <span class="loader"></span>
+        </div>
+    </section>
+    <!--!------------------------------side bar---------------------------------!-->
+    <aside class="side-bar position-fixed top-0 start-0">
+        <div class="side-nav">
+            <div class="info">
+                <ul class="nav-links ps-4 py-4 overflow-hidden">
+                    <li><a id="Search">Search</a></li>
+                    <li><a id="Categories">Categories</a></li>
+                    <li><a id="Area">Area</a></li>
+                    <li><a id="Ingredients">Ingredients</a></li>
+                    <li><a id="Contact">Contact Us</a></li>
+                </ul>
+                <div class="copy-right ps-3">
+                    <div class="icon ">
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-twitter"></i></span>
+                        <span><i class="fa-solid fa-globe"></i></span>
+                    </div>
+                    <p>Copyright Â© 2023 All Rights <br> Reserved.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="side-key">
+            <div class="img w-90">
+                <img class="w-100 py-1" src="./image/logo.png" alt="image yummy">
+            </div>
+            <div class="text-center x-menu">
+                <i class="fa-solid fa-bars fa-xl menu d-block"></i>
+                <i class="fa-solid fa-xmark x-mark d-none"></i>
+            </div>
+            <div class="footer-icon ">
+                <ul>
+                    <li><i class="fa-solid fa-share-nodes"></i></li>
+                    <li><i class="fa-solid fa-globe"></i></li>
+                </ul>
+
+
+            </div>
+        </div>
+    </aside>
+
+
+
+    <!--!------------------------------Home section---------------------------------!-->
+    <section id="home">
+        <div class="container">
+            <div class="row g-4" id="homeInfo">
+
+            </div>
+        </div>
+    </section>
+
+    <!--!------------------------------Search section---------------------------------!-->
+    <section id="search" class="d-none">
+        <div class="container w-100">
+            <div class="row g-4 mt-2">
+                <div class="col-md-6"><input id="searchName" type="search" placeholder="Search By Name"
+                        class="w-100 form-control" value="" />
+                </div>
+                <div class="col-md-6"><input id="searchLetter" type="search" placeholder="Search By First Letter"
+                        class="w-100 form-control" maxlength="1" /></div>
+            </div>
+            <div class="row g-4 mt-2 py-2" id="infoSearch">
+            </div>
+        </div>
+    </section>
+    <!--!------------------------------display details section---------------------------------!-->
+    <div class="display-details d-none">
+        <div class="container w-100 h-100" id="pageInfo">
+
+        </div>
+    </div>
+
+    <div class="display-Relative d-none">
+        <div class="container w-100 h-100">
+            <div class="row g-4" id="relativeCategories">
+
+            </div>
+        </div>
+    </div>
+    <!--!------------------------------Categories section---------------------------------!-->
+    <section id="categories" class="d-none">
+        <div class="container w-100 text-center">
+            <div class="row g-4 mt-2 py-2" id="infoCategories">
+            </div>
+        </div>
+    </section>
+
+    <!--!------------------------------Area section---------------------------------!-->
+    <section id="area" class="d-none">
+        <div class="container w-100 text-center">
+            <div class="row g-4 mt-2 py-2" id="infoArea">
+                <div class="col-md-3">
+                    `
+
+                    `
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="areameals d-none">
+        <div class="container">
+            <div class="row g-4" id="areaMealInfo">
+
+            </div>
+        </div>
+    </div>
+    <!--!------------------------------Ingredients section---------------------------------!-->
+    <section class=" d-none" id="ingredients">
+        <div class="container w-100 text-center">
+            <div class="row g-4 mt-2 py-2 ms-2" id="infoData">
+            </div>
+        </div>
+    </section>
+    <div class="ingredientsMeals d-none w-100 min-vh-100">
+        <div class="container w-100">
+            <div class="row g-4" id="ingredDisplay"></div>
+        </div>
+    </div>
+
+    <!--!------------------------------Contact section---------------------------------!-->
+    <section id="contact" class="d-none">
+        <div class="container">
+            <div class="row py-5 g-4">
+                <div class="contact-info min-vh-100 d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="container w-75 text-center me-5">
+                        <form autocomplete="off"">
+                            <div class=" row g-4 ">
+                                <div class=" col-md-6">
+                            <input id="nameInput" class="w-100 form-control py-2" oninput="validName()" type="text"
+                                placeholder="Enter your Name">
+                            <div id="nameAlert" class="alert alert-danger w-100 mt-2 d-none">
+                                Special characters and numbers not allowed min-3
+                            </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input id="emailInput" class="w-100 form-control py-2" oninput=" validEmail()" type="email"
+                            placeholder="Enter your Email">
+                        <div id="emailAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Email not valid *exemple@yyy.zzz
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="phoneInput" class="w-100 form-control py-2" oninput="validPhone()" type="number"
+                            placeholder="Enter your Phone" maxlength="11">
+                        <div id="phoneAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid Phone Number
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="ageInput" class="w-100 form-control py-2" oninput="validAge()" type="number"
+                            placeholder="Enter your Age" maxlength="2">
+                        <div id="ageAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid age
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input id="passwordInput" class="w-100 form-control py-2" oninput="validPassword()"
+                            type="password" placeholder="Enter your Password">
+                        <div id="passwordAlert" class="alert alert-danger w-100 mt-2 d-none">
+                            Enter valid password *Minimum eight characters, at least one letter and one number:*
+                        </div>
+                    </div>
+                    <div class="col-md-6"><input class="w-100 form-control py-2" type="password" id="rePassword"
+                            oninput=" validrePassword()" placeholder="Repassword"></div>
+                    <div class="col-12">
+                        <button class="btn btn-outline-danger px-2 mt-3 disabled" id="btnSubmit">Submit</button>
+                    </div>
+
+                </div>
+
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <script src="./javascript/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="./javascript/bootstrap.bundle.min.js"></script>
+    <script src="./javascript/index.js"></script>
+</body>
+
+</html>
